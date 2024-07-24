@@ -4,14 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.dmitriev.kata.javapp.dao.UserDao;
-import ru.dmitriev.kata.javapp.dao.UserDaoImpl;
+
 import ru.dmitriev.kata.javapp.model.User;
 
 import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {
-    private UserDao userDao = new UserDaoImpl();
+    private UserDao userDao;
 
     @Autowired
     public void setUserDao(UserDao userDao) {
